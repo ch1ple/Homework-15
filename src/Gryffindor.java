@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Gryffindor extends Hogwarts {
     private int nobility;
     private int honor;
@@ -32,5 +34,26 @@ public class Gryffindor extends Hogwarts {
 
     public void setBravery(int bravery) {
         this.bravery = bravery;
+    }
+
+    public int ability() {
+        return nobility + honor + bravery;
+    }
+
+    public void compare(Gryffindor student) {
+        var s1 = ability();
+        var s2 = student.ability();
+        if (s1 > s2) {
+            System.out.println(getName() + " лучший Гриффиндорец, чем " + student.getName());
+        } else {
+            System.out.println(student.getName() + " лучший Гриффиндорец, чем " + getName());
+        }
+    }
+    @Override
+    public String toString() {
+        return "Гриффиндор: " + super.toString() +
+                ", Благородство = " + nobility +
+                ", Честь = " + honor +
+                ", Храбрость = " + bravery;
     }
 }

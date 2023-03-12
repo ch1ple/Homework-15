@@ -53,4 +53,18 @@ public class Slytherin extends Hogwarts {
     public void setLustOfPower(int lustOfPower) {
         this.lustOfPower = lustOfPower;
     }
+    public int ability() {
+        return cunning + determination + ambition + resourcefulness + lustOfPower;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Слизерин: " + super.toString() +
+                ", Хитрость = " + cunning +
+                ", Решительность = " + determination +
+                ", Амбициозность = " + ambition +
+                ", Находчивость = " + resourcefulness +
+                ", Жажда власти = " + lustOfPower;
+    }
 }

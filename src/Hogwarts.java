@@ -32,4 +32,11 @@ public class Hogwarts {
     public void setTransgression(int transgression) {
         this.transgression = transgression;
     }
+    @Override
+    public String toString() {
+        return "" +
+                "Имя = " + name +
+                ", Магия = " + powerOfWitchcraft +
+                ", Трансгрессия = " + transgression;
+    }
 }
